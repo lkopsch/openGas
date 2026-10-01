@@ -1,0 +1,50 @@
+{
+  "name": "opengas",
+  "version": "0.0.1-beta",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts --dev",
+    "build": "tsc --noEmit && vite build",
+    "start": "tsx server.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "build:android": "tsc --noEmit && node scripts/build-android.mjs && cap sync android",
+    "apk": "npm run build:android && node scripts/android-icons.mjs && powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-apk.ps1"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.6.9",
+    "@capacitor/app": "^7.1.2",
+    "@capacitor/core": "^7.6.9",
+    "@capacitor/filesystem": "^7.1.8",
+    "@capacitor/status-bar": "^7.0.6",
+    "@tesseract.js-data/por": "^1.0.0",
+    "exceljs": "^4.4.0",
+    "express": "^5.1.0",
+    "lucide-react": "^1.49.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^7.18.4",
+    "sharp": "^0.35.5",
+    "sql.js": "^1.14.1",
+    "tesseract.js": "^7.0.0",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.6.9",
+    "@playwright/test": "^1.63.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/sql.js": "^1.4.11",
+    "@vitejs/plugin-react": "^4.7.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.3"
+  },
+  "overrides": {
+    "exceljs": {
+      "uuid": "^11.1.1"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">openGas</string>
+    <string name="title_activity_main">openGas</string>
+    <string name="package_name">com.opengas.app</string>
+    <string name="custom_url_scheme">com.opengas.app</string>
+</resources>
